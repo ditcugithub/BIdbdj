@@ -7,7 +7,7 @@ workflows:
     scripts:
       - name: Checkout code
         script: |
-          git clone https://github.com/your-username/FloatingBrowser.git
+          git clone https://github.com/ditcugithub/BIdbdj.git
           cd FloatingBrowser
       - name: Build dynamic library
         script: |
