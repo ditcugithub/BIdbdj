@@ -9,18 +9,9 @@ workflows:
         script: |
           git clone https://github.com/your-username/FloatingBrowser.git
           cd FloatingBrowser
-      - name: Install dependencies
-        script: |
-          # Install any dependencies if required
-          # For this example, there are no additional dependencies
-          echo "No additional dependencies"
       - name: Build dynamic library
         script: |
           mkdir -p build
           clang -dynamiclib -o build/libfloatingbrowser.dylib floating_browser.m -framework Cocoa -framework WebKit
-      - name: Upload Build Artifact
-        script: |
-          mkdir -p $CM_BUILD_DIR/artifacts
-          cp build/libfloatingbrowser.dylib $CM_BUILD_DIR/artifacts/
     artifacts:
-      - path: artifacts/libfloatingbrowser.dylib
+      - build/libfloatingbrowser.dylib
