@@ -8,7 +8,7 @@ workflows:
       - name: Checkout code
         script: |
           git clone https://github.com/ditcugithub/BIdbdj.git
-          cd FloatingBrowser
+          cd BIdbdj
       - name: Build dynamic library
         script: |
           mkdir -p build
