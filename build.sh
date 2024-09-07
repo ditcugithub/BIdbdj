@@ -8,6 +8,6 @@ mkdir -p build
 cd build
 
 # Compile the dynamic library
-clang -dynamiclib -o libfloatingbrowser.dylib ../src/floating_browser.m -framework Cocoa -framework WebKit
+clang -dynamiclib -o libfloatingbrowser.dylib ../floating_browser.m -framework Cocoa -framework WebKit
 
 echo "Build complete. The library is located in build/libfloatingbrowser.dylib"
